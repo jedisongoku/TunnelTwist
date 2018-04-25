@@ -226,7 +226,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Berat/Documents/GitHub/TunnelTwist/ttks.keystore
+  AndroidKeystoreName: C:/Users/BLAST/Documents/GitHub/TunnelTwist/ttks.keystore
   AndroidKeyaliasName: ttks
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -572,7 +572,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: AADOTWEEN
     2: 
-    4: 
+    4: NO_GPGS
     5: AADOTWEEN
     6: AADOTWEEN
     7: AADOTWEEN

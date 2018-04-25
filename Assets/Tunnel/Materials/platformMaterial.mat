@@ -62,7 +62,7 @@ Material:
     - _Shininess: 0.138
     - _V_CW_OutlineWidth: 0.005
     m_Colors:
-    - _Color: {r: 0.7489644, g: 0.45200938, b: 0.44914472, a: 1}
+    - _Color: {r: 0.32889646, g: 0.68400556, b: 0.5988446, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _QOffset: {r: 0, g: 0, b: 0, a: 0}
     - _RelativePos: {r: 0, g: 0, b: 0, a: 0}

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &172832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 472048}
+  - 114: {fileID: 11497620}
+  m_Layer: 0
+  m_Name: MaterialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &472048
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11497620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae54196f988647f8879f4c9f5c6ca29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialMainColorChange:
+  - {fileID: 2100000, guid: f1d9017dd860749a4afcd163a80cd7e7, type: 2}
+  - {fileID: 2100000, guid: 28b6d04288de8416ea57f55e59fec9d3, type: 2}
+  - {fileID: 2100000, guid: d9c49f29015df467aa89c1a97332ce25, type: 2}
+  materialPointColorChange:
+  - {fileID: 2100000, guid: e4780e55c3483489bbfc0fdc95b5bf99, type: 2}
+  - {fileID: 2100000, guid: e927ed5c38ac53b4cbe16f9a3ddacfd8, type: 2}
+  materialCurveChange:
+  - {fileID: 2100000, guid: f1d9017dd860749a4afcd163a80cd7e7, type: 2}
+  - {fileID: 2100000, guid: d8c866c7a21c248c798e9ac178a3bb52, type: 2}
+  - {fileID: 2100000, guid: d9c49f29015df467aa89c1a97332ce25, type: 2}
+  - {fileID: 2100000, guid: e4780e55c3483489bbfc0fdc95b5bf99, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 172832}
+  m_IsPrefabParent: 1

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: platformMaterial
+  m_Shader: {fileID: 4800000, guid: ce8d27023dc604f59aae972fd73567a1, type: 3}
+  m_ShaderKeywords: V_CW_MATCAP_BLEND_ADD _EMISSION
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BlendTex:
+        m_Texture: {fileID: 2800000, guid: 648c1ee8dc84040029eda9bbf70a41c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonShade:
+        m_Texture: {fileID: 8900000, guid: 3ecd30d909ac048a999d1f0a14c76a6a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - __MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_1625:
+        m_Texture: {fileID: 8900000, guid: b27df13d1025e425aa1859448785c315, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_8767:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Bend: 1
+    - BendFreq: 1
+    - CameraOffset: 1
+    - ZOffset: 1
+    - _Alpha: 0.082
+    - _Bend: 1
+    - _Blend: 0.407
+    - _Brightness: 0
+    - _Curvature: 0.02
+    - _Dist: 300
+    - _HorizontalCurvature: 0.001
+    - _Outline: 0.0083
+    - _Shininess: 0.138
+    - _V_CW_OutlineWidth: 0.005
+    m_Colors:
+    - _Color: {r: 0.7489644, g: 0.45200938, b: 0.44914472, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _QOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _RelativePos: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _V_CW_OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _node_3442: {r: 1, g: 1, b: 1, a: 1}
+    - _node_3442_copy: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1002 &2100001
+EditorExtensionImpl:
+  serializedVersion: 6

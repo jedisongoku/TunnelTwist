@@ -96,6 +96,22 @@ namespace AppAdvisory.TunnelAndTwist
 		public int Add1Point()
 		{
 			point++;
+            
+            switch(point)
+            {
+                case 25:
+                    AppsFlyerMMP.Score25();
+                    break;
+                case 50:
+                    AppsFlyerMMP.Score50();
+                    break;
+                case 75:
+                    AppsFlyerMMP.Score75();
+                    break;
+                case 100:
+                    AppsFlyerMMP.Score100();
+                    break;
+            }
 
 			return point;
 		}
@@ -230,19 +246,28 @@ namespace AppAdvisory.TunnelAndTwist
 				ShowRateUs ();
 			}
 
-			#if VS_SHARE
+#if VS_SHARE
 			if(g == AnimFail.start)
 				VSSHARE.DOTakeScreenShot();
 
 			if(g == AnimFail.end)
 				VSSHARE.DOOpenScreenshotButton();
-			#endif
+#endif
 
-			#if APPADVISORY_ADS
+#if APPADVISORY_ADS
 			AdsManager.instance.ShowBanner();
-			#endif
+#endif
 
-			Utils.lastScore = point;
+
+
+            //Send the scoreto the global leader board
+#if UNITY_ANDROID
+            GoogleManager.ReportScore(point);
+#elif UNITY_IOS
+
+#endif
+
+            Utils.lastScore = point;
 
 			if (Utils.bestScore < point)
 				Utils.bestScore = point;
@@ -315,9 +340,9 @@ namespace AppAdvisory.TunnelAndTwist
 
 		void OnDestroy()
 		{
-			#if AADOTWEEN
+#if AADOTWEEN
 			DOTween.KillAll();
-			#endif
+#endif
 			PlayerPrefs.Save();
 		}
 
@@ -330,9 +355,9 @@ namespace AppAdvisory.TunnelAndTwist
 
 			if (count > 30) 
 			{
-				#if VSRATE
+#if VSRATE
 				AppAdvisory.VSRATE.RateUsManager.ShowRateUsWindows ();
-				#endif
+#endif
 			}
 		}
 
@@ -343,17 +368,17 @@ namespace AppAdvisory.TunnelAndTwist
 			PlayerPrefs.SetInt("GAMEOVER_COUNT",count);
 			PlayerPrefs.Save();
 
-			#if APPADVISORY_ADS
+#if APPADVISORY_ADS
 			if(count > numberOfPlayToShowInterstitial)
 			{
-			#if UNITY_EDITOR
+#if UNITY_EDITOR
 				print("count = " + count + " > numberOfPlayToShowINterstitial = " + numberOfPlayToShowInterstitial);
-			#endif
+#endif
 				if(AdsManager.instance.IsReadyInterstitial() || AdsManager.instance.IsReadyVideoAds())
 				{
-			#if UNITY_EDITOR
+#if UNITY_EDITOR
 					print("AdsManager.instance.IsReadyInterstitial() == true ----> SO ====> set count = 0 AND show interstial");
-			#endif
+#endif
 					if(UnityEngine.Random.Range(0,100) < 50)
 					{
 						if(AdsManager.instance.IsReadyVideoAds())
@@ -390,9 +415,9 @@ namespace AppAdvisory.TunnelAndTwist
 				}
 				else
 				{
-			#if UNITY_EDITOR
+#if UNITY_EDITOR
 					print("AdsManager.instance.IsReadyInterstitial() == false");
-			#endif
+#endif
 				}
 
 			}
@@ -401,7 +426,7 @@ namespace AppAdvisory.TunnelAndTwist
 				PlayerPrefs.SetInt("GAMEOVER_COUNT", count);
 			}
 			PlayerPrefs.Save();
-			#else
+#else
 			if(count >= numberOfPlayToShowInterstitial)
 			{
 			Debug.LogWarning("To show ads, please have a look to Very Simple Ad on the Asset Store, or go to this link: " + VerySimpleAdsURL);
@@ -415,7 +440,7 @@ namespace AppAdvisory.TunnelAndTwist
 			PlayerPrefs.SetInt("GAMEOVER_COUNT", count);
 			}
 			PlayerPrefs.Save();
-			#endif
+#endif
 		}
 	}
 }

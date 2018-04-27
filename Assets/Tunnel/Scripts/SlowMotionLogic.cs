@@ -25,6 +25,8 @@ namespace AppAdvisory.TunnelAndTwist
 
 		float ratio = 0.1f;
 
+        //bools to check whether the player has gotten a combo 3 or 5
+        private bool gotCombo3, gotCombo5;
 
 		public int comboCount
 		{
@@ -78,7 +80,7 @@ namespace AppAdvisory.TunnelAndTwist
 			EventManager.DOPointColor(new Color (1f, 1f, 1f, 1));
 		}
 
-		void OnEnable()
+        void OnEnable()
 		{
 			EventManager.OnAddOnePoint += AddCombo;
 		}
@@ -97,10 +99,36 @@ namespace AppAdvisory.TunnelAndTwist
 
 		void Start()
 		{
+            gotCombo3 = false;
+            gotCombo5 = false;
 			StartCoroutine(_CoUpdate());
 		}
 
-		IEnumerator _CoUpdate()
+        private void Update()
+        {
+            /*if(!gotCombo3)
+            {
+                if (comboCount == 3)
+                {
+                    gotCombo3 = true;
+                    AppsFlyerMMP.Combo3();
+                }
+                else if(comboCount < 3)
+                    gotCombo3 = false;
+            }
+            if (!gotCombo5)
+            {
+                if (comboCount == 5)
+                {
+                    gotCombo5 = true;
+                    AppsFlyerMMP.Combo5();
+                }
+                else if(comboCount < 5)
+                    gotCombo5 = false;
+            }*/
+        }
+
+        IEnumerator _CoUpdate()
 		{
 			while(true)
 			{
@@ -154,6 +182,13 @@ namespace AppAdvisory.TunnelAndTwist
 		{
 			if (Time.timeScale != 1)
 				return;
+
+            Debug.Log(comboCount);
+            //Combo 3 triggeres on comboCount is 2 because 0 is considered 1
+            if (comboCount == 2)
+                AppsFlyerMMP.Combo3();
+            if (comboCount == 4)
+                AppsFlyerMMP.Combo5();
 
 			StopCoroutine ("CoUpdate");
 			StartCoroutine ("CoUpdate");

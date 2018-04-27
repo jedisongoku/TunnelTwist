@@ -65,7 +65,7 @@ namespace AppAdvisory.TunnelAndTwist
 			//		pointMesh.localScale = Vector3.one * (defaultScale + p + scaleBeatPoint*5);
 			//		shadowMesh.localScale = pointMesh.localScale;
 		}
-
+        
 		public override void OnCollisionWithPlayer()
 		{
 			player.DoExplosionParticle ();

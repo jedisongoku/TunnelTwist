@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class GoogleManager : MonoBehaviour
 {
 
-    string androidLeaderboard = "CgkItYWW9sgKEAIQAA";
+    string androidLeaderboard = "CgkI-vyvy_oDEAIQAQ";
     string iosLeaderboard = "Replace This";
     static string leaderboard;
 
@@ -55,9 +55,17 @@ public class GoogleManager : MonoBehaviour
         });
     }
 
-    public static void ReportScore()
+    public static void ReportScore(int score)
     {
-        //Social.ReportScore(ScoreManager.Instance.HighScore, leaderboard, success => { if (success) { Debug.Log("score reported"); } else { Debug.Log("score report failed"); } });
+        Social.ReportScore(score, leaderboard, success => 
+        {
+            if (success)
+            { Debug.Log("score reported");
+            }
+            else
+            { Debug.Log("score report failed");
+            }
+        });
     }
 
     public void LogOut()

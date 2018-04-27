@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+guid: b5d50f6082db4b04985162e16d80d022
 labels:
 - gvh
 - gvh_manifest
+- gvh_version-0.9.50
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

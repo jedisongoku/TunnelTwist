@@ -28,6 +28,8 @@ namespace AppAdvisory.TunnelAndTwist
 		[SerializeField] private Vector3 shadowLocalPosition;
 		[SerializeField] private Vector3 shadowLocalScale;
 
+        private int deathCounter;
+
 		public bool m_isJumping;
 		public bool isJumping
 		{
@@ -67,7 +69,10 @@ namespace AppAdvisory.TunnelAndTwist
 			isGameOver = true;
 			isStarted = false;
 
-			shadowLocalPosition = shadow.localPosition;
+            if (!PlayerPrefs.HasKey("DeathCounter"))
+                PlayerPrefs.SetInt("DeathCounter", 0);
+
+            shadowLocalPosition = shadow.localPosition;
 			shadowLocalScale = shadow.localScale;
 
 			shadow.gameObject.SetActive (false);
@@ -190,6 +195,19 @@ namespace AppAdvisory.TunnelAndTwist
 
 
 			isGameOver = true;
+
+            
+            //Using player prefs for death counter since the scene is reloaded on every death
+            int deathCounter = PlayerPrefs.GetInt("DeathCounter") + 1;
+            PlayerPrefs.SetInt("DeathCounter", deathCounter);
+
+            if(deathCounter == UnityAds.instance.replaysBeforeAd)
+            {
+                deathCounter = 0;
+                PlayerPrefs.SetInt("DeathCounter", deathCounter);
+                UnityAds.instance.ShowAd();
+            }
+
 
 			#if AADOTWEEN
 			DOTween.KillAll ();

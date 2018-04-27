@@ -65,4 +65,10 @@ public class GoogleManager : MonoBehaviour
         Debug.Log("LogOut");
         ((PlayGamesPlatform)Social.Active).SignOut();
     }
+
+    public void ShowLeaderBoardUI()
+    {
+        Debug.Log("Show Leader Board");
+        Social.ShowLeaderboardUI();
+    }
 }

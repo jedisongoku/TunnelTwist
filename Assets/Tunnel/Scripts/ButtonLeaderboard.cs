@@ -20,9 +20,10 @@ namespace AppAdvisory.TunnelAndTwist
 	{
 		public void OnClickedLeaderboard()
 		{
-			#if APPADVISORY_LEADERBOARD
+            Social.ShowLeaderboardUI();
+			/*#if APPADVISORY_LEADERBOARD
 			LeaderboardManager.ShowLeaderboardUI();
-			#endif
+			#endif*/
 		}
 	}
 }

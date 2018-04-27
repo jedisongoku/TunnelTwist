@@ -1,8 +1,5 @@
 fileFormatVersion: 2
 guid: 5d4ff89980bdd4c9780aa3ceee54a51b
-labels:
-- gvh
-- gvh_version-0.9.50
 timeCreated: 1435699549
 licenseType: Pro
 MonoImporter:
@@ -13,3 +10,5 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+labels:
+- gvh_v0.9.50

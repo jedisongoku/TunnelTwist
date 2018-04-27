@@ -10,7 +10,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 0
-  companyName: Blast
+  companyName: Belizard
   productName: Tunnel Twist
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -226,8 +226,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/BLAST/Documents/GitHub/TunnelTwist/ttks.keystore
-  AndroidKeyaliasName: ttks
+  AndroidKeystoreName: C:/Users/BLAST/Documents/GitHub/TunnelTwist/tunneltwist_ks.keystore
+  AndroidKeyaliasName: tunneltwist_ks
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
@@ -241,9 +241,9 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: ed08cc8ee7b764da09364f89720bf65a, type: 3}
-      m_Width: 0
-      m_Height: 0
+      m_Icon: {fileID: 2800000, guid: 5d312a36b8c60754881149392ec07108, type: 3}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings:
@@ -744,9 +744,9 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 7484f13a-7537-45df-8e8e-0076a6266488
+  cloudProjectId: f331c123-a066-4db9-99dc-d3fdd577b832
   projectName: Tunnel Twist
-  organizationId: beratbekce
+  organizationId: investable-games
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

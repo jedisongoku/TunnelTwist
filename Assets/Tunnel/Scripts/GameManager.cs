@@ -90,29 +90,20 @@ namespace AppAdvisory.TunnelAndTwist
 				return m_point;
 			}
 		}
-		/// <summary>
-		/// Add 1 point to the player
-		/// </summary>
-		public int Add1Point()
+
+
+
+        public int getScore()
+        {
+            return point;
+        }
+
+        /// <summary>
+        /// Add 1 point to the player
+        /// </summary>
+        public int Add1Point()
 		{
 			point++;
-            
-            switch(point)
-            {
-                case 25:
-                    AppsFlyerMMP.Score25();
-                    break;
-                case 50:
-                    AppsFlyerMMP.Score50();
-                    break;
-                case 75:
-                    AppsFlyerMMP.Score75();
-                    break;
-                case 100:
-                    AppsFlyerMMP.Score100();
-                    break;
-            }
-
 			return point;
 		}
 		/// <summary>
@@ -360,7 +351,6 @@ namespace AppAdvisory.TunnelAndTwist
 #endif
 			}
 		}
-
 		public void ShowAds()
 		{
 			int count = PlayerPrefs.GetInt("GAMEOVER_COUNT",0);

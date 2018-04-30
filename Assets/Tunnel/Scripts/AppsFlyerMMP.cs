@@ -55,36 +55,7 @@ public class AppsFlyerMMP : MonoBehaviour {
         //AppsFlyer.createValidateInAppListener ("AppsFlyerTrackerCallbacks", "onInAppBillingSuccess", "onInAppBillingFailure");
 
     }
-
-
-    public static void Score25()
-    {
-        Debug.Log("AppsFlyerMMP: Score 25");
-        Dictionary<string, string> score25 = new Dictionary<string, string>();
-        score25.Add("score25", "1");
-        AppsFlyer.trackRichEvent("score25", score25);
-    }
-    public static void Score50()
-    {
-        Debug.Log("AppsFlyerMMP: Score 50");
-        Dictionary<string, string> score50 = new Dictionary<string, string>();
-        score50.Add("score50", "1");
-        AppsFlyer.trackRichEvent("score50", score50);
-    }
-    public static void Score75()
-    {
-        Debug.Log("AppsFlyerMMP: Score 75");
-        Dictionary<string, string> score75 = new Dictionary<string, string>();
-        score75.Add("score75", "1");
-        AppsFlyer.trackRichEvent("score75", score75);
-    }
-    public static void Score100()
-    {
-        Debug.Log("AppsFlyerMMP: Score 100");
-        Dictionary<string, string> score100 = new Dictionary<string, string>();
-        score100.Add("score100", "1");
-        AppsFlyer.trackRichEvent("score75", score100);
-    }
+    
     public static void Combo3()
     {
         Debug.Log("AppsFlyerMMP: Combo 3");
@@ -98,5 +69,12 @@ public class AppsFlyerMMP : MonoBehaviour {
         Dictionary<string, string> combo5 = new Dictionary<string, string>();
         combo5.Add("combo5", "1");
         AppsFlyer.trackRichEvent("combo5", combo5);
+    }
+    public static void Score(int playerScore)
+    {
+        Debug.Log("AppsFlyerMMP: Score of " + playerScore);
+        Dictionary<string, string> score = new Dictionary<string, string>();
+        score.Add("score", playerScore.ToString());
+        AppsFlyer.trackRichEvent("score", score);
     }
 }

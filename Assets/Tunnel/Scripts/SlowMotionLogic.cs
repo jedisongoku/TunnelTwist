@@ -182,8 +182,7 @@ namespace AppAdvisory.TunnelAndTwist
 		{
 			if (Time.timeScale != 1)
 				return;
-
-            Debug.Log(comboCount);
+            
             //Combo 3 triggeres on comboCount is 2 because 0 is considered 1
             if (comboCount == 2)
                 AppsFlyerMMP.Combo3();

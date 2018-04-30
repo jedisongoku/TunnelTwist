@@ -27,7 +27,7 @@ namespace AppAdvisory.TunnelAndTwist
 		[SerializeField] private Transform shadow;
 		[SerializeField] private Vector3 shadowLocalPosition;
 		[SerializeField] private Vector3 shadowLocalScale;
-
+        [SerializeField] private GameManager gameManager;
         private int deathCounter;
 
 		public bool m_isJumping;
@@ -208,6 +208,7 @@ namespace AppAdvisory.TunnelAndTwist
                 UnityAds.instance.ShowAd();
             }
 
+            AppsFlyerMMP.Score(gameManager.getScore());
 
 			#if AADOTWEEN
 			DOTween.KillAll ();

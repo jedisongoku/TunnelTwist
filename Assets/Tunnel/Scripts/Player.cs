@@ -360,5 +360,11 @@ namespace AppAdvisory.TunnelAndTwist
 
 			return 0;
 		}
-	}
+
+        private void OnApplicationQuit()
+        {
+            //Reset death counter back to 0 for unity ads when the player quits the game
+            PlayerPrefs.SetInt("DeathCounter", 0);
+        }
+    }
 }

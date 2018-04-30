@@ -1143,6 +1143,10 @@ Prefab:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 32676565}
+    - target: {fileID: 11426418, guid: 5c099ed4421f7487fa85de53245345ce, type: 2}
+      propertyPath: doAnimationStart
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c099ed4421f7487fa85de53245345ce, type: 2}
   m_IsPrefabParent: 0

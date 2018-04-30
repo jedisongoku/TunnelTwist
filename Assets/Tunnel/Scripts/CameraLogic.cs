@@ -52,7 +52,7 @@ namespace AppAdvisory.TunnelAndTwist
 		void OnTouched (TouchDirection td)
 		{
 			InputTouch.OnTouched -= OnTouched;
-			Time.timeScale = 5;
+			Time.timeScale = 100;
 		}
 
 		IEnumerator Start()
